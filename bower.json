@@ -1,0 +1,14 @@
+{
+  "name": "indstria",
+  "version": "0.0.1",
+  "dependencies": {
+    "es5-shim": "latest",
+    "html5-mobile-boilerplate": "https://github.com/h5bp/mobile-boilerplate.git",
+    "modernizr": "latest",
+    "bootstrap": "latest",
+    "jquery": "latest",
+    "requirejs": "latest",
+    "woothee": "https://github.com/woothee/woothee-js.git",
+    "torcons": "https://github.com/wata/torcons.git"
+  }
+}

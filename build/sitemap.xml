@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc><%= pkg.homepage %>/</loc>
+        <lastmod>Sat Feb 15 2014 22:47:05 GMT+0900 (JST)</lastmod>
+    </url>
+</urlset>
