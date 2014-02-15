@@ -39,6 +39,7 @@ Build (w/ htmlmin, imagemin, sass, cssmin, jshint, requirejs)
 $ grunt build
 ```
 
-`gh-pages` root is `build/`
+gh-pages
 ----------------------
 
+root is `build/`
