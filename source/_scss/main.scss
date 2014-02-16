@@ -1,282 +1,202 @@
 @charset "UTF-8";
 
-/* ==========================================================================
-   Global
-   ========================================================================== */
 a {
-    -webkit-transition: color .1s linear;
-    -moz-transition: color .5s linear;
-    transition: color .1s linear;
-}
-a:hover, a:focus {
-    text-decoration: none;
-}
-
-.btn-facebook {
-    color: #fff;
-    background-color: #428bca;
-    border-color: #357ebd;
-}
-.btn-facebook:hover,
-.btn-facebook:focus,
-.btn-facebook:active,
-.btn-facebook.active {
-    color: #fff;
-    background-color: #3276b1;
-    border-color: #285e8e;
-}
-.btn-twitter {
-    color: #fff;
-    background-color: #5bc0de;
-    border-color: #46b8da;
-}
-.btn-twitter:hover,
-.btn-twitter:focus,
-.btn-twitter:active,
-.btn-twitter.active {
-    color: #fff;
-    background-color: #39b3d7;
-    border-color: #269abc;
+    -webkit-transition: color .3s linear;
+    -moz-transition: color .3s linear;
+    transition: color .3s linear;
+    &:hover, &:focus {
+        text-decoration: none;
+    }
 }
 
-/* ==========================================================================
-   Header
-   ========================================================================== */
 body {
-    background: url(../img/9717149792_1e6d58ce44_o.jpg) no-repeat top left;
-    background-size: contain;
+    background-color: #fff100;
 }
+
+.icon-logo-indstriashort {
+    color: rgba(0,0,0,.1);
+    position: absolute;
+}
+
 .masthead {
-    height: 760px;
-    padding-top: 160px;
-    overflow:hidden;
-/*
-    background: url(https://g.twimg.com/sites/about/modules/internal/features/feature_mobile_product/landing/carousel/carousel-one.jpg) no-repeat center center;
-    background: url(../img/9717149792_1e6d58ce44_o.jpg) no-repeat center center;
-*/
-    background-color: rgba(255,241,0,0.5);
-    background-size: cover;
-}
-.masthead img {
-    width: 480px;
-}
-
-.masthead h1,
-.masthead p,
-.masthead .lead {
-    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
-}
-.masthead h1 {
-    font-size: 40px;
-    margin-top: 0;
-}
-.masthead h1 small {
-    color: inherit;
-}
-.masthead .lead {
-    font-size: 34px;
-    margin-bottom: 40px;
-}
-
-.masthead .social-links {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.masthead .social-links li {
-    margin-bottom: 10px;
-}
-.masthead .social-links li:last-child {
-    margin-bottom: 0;    
-}
-.masthead .social-links li a {
-    padding: 20px 20px;
-    width: 360px;
-    border-radius: 0;
-    text-align: left;
-}
-.masthead .social-links li a i {
-    font-size: 35px;
-    vertical-align: middle;
-    margin-right: 10px;
-    line-height: 0; 
-}
-
-/* ==========================================================================
-   Section
-   ========================================================================== */
-section {
-    height: 760px;
-    padding-top: 174px;
-    border-bottom: 1px solid #ebebeb;
-}
-section:nth-child(odd) {
-    background-color: #FFF100;
-}
-section:nth-child(even) {
-    background-color: #fff;
-}
-section h1 {
-    text-align:center;
-    font-size: 24px;
-    color:#5a5a5a;
-    margin-bottom:20px;
-    font-weight: 100;
-}
-section p {
-    color: #999;
-}
-section .thumb {
-    min-height:200px;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: contain;
-}
-
-#section01 .thumb {
-    background-image: url(http://placehold.it/1000x700);
-}
-#section02 .thumb {
-    background-image: url(http://placehold.it/1000x700/FFF100/FFFFFF);
-}
-#section03 .thumb {
-    background-image: url(http://placehold.it/1000x700);
-}
-#section04 .thumb {
-    background-image: url(http://placehold.it/1000x700/FFF100/FFFFFF);
-}
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.footer {
-    text-align: center;
-    padding: 49px 0 80px;
-    background-color: #f7f7f7;
-}
-
-.footer-links {
-    margin: 10px 0;
+    padding-right: 0;
     padding-left: 0;
-    list-style: none;
-}
-.footer-links li {
-    display: inline-block;
-    letter-spacing: 0;
-    padding-left: 10px;
-    margin-left: 10px;
-    color: #bfbfbf;
-}
-.footer-links li:first-child {
-    margin-left: 0;
-    padding-left: 0;
-}
-.footer-links li a {
-    color: inherit;
-    text-decoration: underline;
-}
-.footer-links li a:hover, .footer-links li a:focus {
-    color: inherit;
-}
-
-.footer-social-buttons {
-    margin: 30px auto 20px;
-    padding: 0;
-    width: 200px;
-    list-style: none;
-}
-.footer-social-buttons li {
-    margin-left: 10px;
-    float: left;
-}
-.footer-social-buttons li:first-child {
-    margin-left: 0;
-}
-
-.footer-pagetop {
-    color: #f7f7f7;
-    font-size: 40px;
-    line-height: 1;
-    margin-bottom: 15px;
-}
-.footer-pagetop a {
-    color:#fff;
-    display: inline-block;
-    background-color: #FFF100;
-    width: 43px;
-    height: 43px;
+    z-index: 1;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    i {
+        vertical-align: middle;
+        line-height: 0; 
+    }
+    header {
+        position: absolute;
+        h1 {
+            font-size: 50px;
+            line-height: 1;
+            margin: 0;
+        }
+        .lead {
+            font-size: 24px;
+            font-weight: 100;
+            margin: 0;
+        }
+        .social-links {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    border-radius: 0;
+                    text-align: left;
+                    text-shadow: 0 1px 1px #fff;
+                    i {
+                        font-size: 35px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        position: absolute;
+        .footer-links {
+            margin: 10px 0;
+            padding-left: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                letter-spacing: 0;
+                margin-left: 10px;
+                padding-left: 10px;
+                &:first-child {
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+                i {
+                    font-size: 20px;
+                    margin-right: 5px;
+                }
+                a {
+                    color: inherit;
+                    text-decoration: underline;
+                    &:hover, &:focus {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (max-width: 320px) {
-.btn-facebook {
-    font-size: inherit;
-}
-.btn-twitter {
-    font-size: inherit;
-}
-
-.masthead {
-    padding-top: 20px;
-}
-.masthead h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-.masthead .social-links li a {
-    width: 290px;
-}
-.masthead img {
-    width: 300px;
-}
-.masthead .social-links li a i {
-    font-size: 30px;
-}
-
-}
-
-@media (min-width: 768px) {
-/*    .masthead {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    .masthead h1 {
-        font-size: 75px;
-    }
-    .masthead .lead {
-        margin-left: 15%;
-        margin-right: 15%;
-        font-size: 30px;
+@media only screen and (max-width: 767px) {
+    /* for mobile */
+    .icon-logo-indstriashort {
+        font-size: 130px;
+        left: 0;
+        bottom: 20%;
     }
     .masthead {
-        padding-top: 140px;
-        padding-bottom: 140px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        header {
+            position: static;
+            .social-links {
+                margin-top: 80px;
+                position: absolute;
+                left: 130px;
+            }
+        }
+        section {
+            margin-top: 20px;
+            img {
+                width: 95px;
+                height: 245px;
+            }
+        }
+        footer {
+            bottom: 0;
+        }
     }
-    .masthead h1 {
-        font-size: 80px;
+}
+@media only screen and (min-width: 768px) {
+    /* for tablet */
+    .container {
+        width: 650px;
     }
-    section h1 {
-        text-align:left;
-        font-size: 38px;
+    .icon-logo-indstriashort {
+        font-size: 300px;
+        right: 0;
+        bottom: 20%;
     }
-*/}
-@media (min-width: 992px) {
-/*    section .thumb {
-        min-height:350px;
+    .masthead {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        header {
+            right: 20%;
+            .social-links {
+                margin-top: 80px;
+            }
+        }
+        section {
+            margin-top: -50px;
+            img {
+                width: 190px;
+                height: 490px;
+            }
+        }
+        footer {
+            right: 24%;
+            bottom: 20%;
+        }
     }
-    section .text {
-        padding-top:80px;
-        padding-bottom:80px;
+}
+@media only screen and (min-width: 992px) {
+    /* for pc */
+    .container {
+        width: 750px;
     }
-*/}
-@media only screen and (min-width: 800px) {
-    /* Style adjustments for viewports that meet the condition */
+    .icon-logo-indstriashort {
+        font-size: 400px;
+        right: 0;
+        bottom: 15%;
+    }
+    .masthead {
+        padding-top: 130px;
+        padding-bottom: 130px;
+        header {
+            right: 20%;
+            .social-links {
+                margin-top: 50px;
+                position: static;
+            }
+        }
+        section {
+            margin-top: -50px;
+            img {
+                width: 190px;
+                height: 490px;
+            }
+        }
+        footer {
+            right: 20%;
+            bottom: 15%;
+        }
+    }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for viewports that meet the condition */
+    /* for hidpi */
 }

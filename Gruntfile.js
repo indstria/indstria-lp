@@ -16,9 +16,9 @@ module.exports = function(grunt){
         bower: {
             install: {
                 options: {
-                    install       : true,
-                    copy          : false,
-                    cleanBowerDir : false
+                    install      : true,
+                    copy         : false,
+                    cleanBowerDir: false
                 }
             }
         },
@@ -63,23 +63,6 @@ module.exports = function(grunt){
                 }
             }
         },
-        requirejs: {
-            main: {
-                options: {
-                    name          : 'main',
-                    baseUrl       : '<%= dir.source %>/js',
-                    mainConfigFile: '<%= dir.source %>/js/config.js',
-                    out           : '<%= dir.build %>/js/app.js'
-                }
-            }
-        },
-        jshint: {
-            all    : ['<%= dir.source %>/js/*.js'],
-            options: {
-                ignores : ['<%= dir.source %>/js/config.js'],
-                jshintrc: '.jshintrc'
-            }
-        },
         copy: {
             init: {
                 files: [
@@ -95,23 +78,14 @@ module.exports = function(grunt){
             },
             update: {
                 files: [
-                    { expand: true, cwd: 'bower_components/html5-mobile-boilerplate/js', src: 'helper.js', dest: '<%= dir.source %>/js/vendor', filter: 'isFile' },
-                    { expand: true, cwd: 'bower_components/modernizr', src: 'modernizr.js', dest: '<%= dir.source %>/js/vendor', filter: 'isFile' },
                     { expand: true, cwd: 'bower_components/bootstrap/dist/css', src: 'bootstrap.css', dest: '<%= dir.source %>/css', filter: 'isFile' },
-                    { expand: true, cwd: 'bower_components/bootstrap/dist/js', src: 'bootstrap.js', dest: '<%= dir.source %>/js/vendor', filter: 'isFile' },
-                    { expand: true, cwd: 'bower_components/jquery/dist', src: 'jquery.js', dest: '<%= dir.source %>/js/vendor', filter: 'isFile' },
-                    { expand: true, cwd: 'bower_components/requirejs', src: 'require.js', dest: '<%= dir.source %>/js/vendor', filter: 'isFile' },
-                    { expand: true, cwd: 'bower_components/woothee/release', src: 'woothee.js', dest: '<%= dir.source %>/js/vendor', filter: 'isFile' },
                     { expand: true, cwd: 'bower_components/torcons/fonts', src: '*.{eot,svg,ttf,woff}', dest: '<%= dir.source %>/fonts', filter: 'isFile' },
                     { expand: true, cwd: 'bower_components/torcons/css', src: 'torcons.css', dest: '<%= dir.source %>/css', filter: 'isFile' },
-                    { expand: true, cwd: 'bower_components/es5-shim', src: 'es5-shim.js', dest: '<%= dir.source %>/js/vendor', filter: 'isFile' }
                 ]
             },
             build: {
                 files: [
                     { expand: true, cwd: '<%= dir.source %>', src: ['*.{ico,txt,xml,htaccess}', 'fonts/*.{eot,svg,ttf,woff}'], dest: '<%= dir.build %>', filter: 'isFile' },
-                    { expand: true, cwd: '<%= dir.source %>', src: ['js/vendor/modernizr.js'], dest: '<%= dir.build %>', filter: 'isFile' },
-                    { expand: true, cwd: '<%= dir.source %>', src: ['js/vendor/require.js'], dest: '<%= dir.build %>', filter: 'isFile' }
                 ]
             }
         },
@@ -146,11 +120,6 @@ module.exports = function(grunt){
                 if (/\.scss$/.test(filepath)) {
                     return ['sass', 'cssmin'];
                 }
-            },
-            js: function(filepath){
-                if (/\.js$/.test(filepath)) {
-                    return ['jshint', 'requirejs'];
-                }
             }
         }
     });
@@ -164,8 +133,6 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -221,6 +188,6 @@ module.exports = function(grunt){
         grunt.task.run(['bower', 'copy:init', 'copy:update']);
     });
     grunt.registerTask('update', ['bower', 'copy:update']);
-    grunt.registerTask('build', ['clean', 'htmlmin', 'imagemin', 'sass', 'cssmin', 'jshint', 'requirejs', 'copy:build']);
+    grunt.registerTask('build', ['clean', 'htmlmin', 'imagemin', 'sass', 'cssmin', 'copy:build']);
     grunt.registerTask('server', ['build', 'connect', 'esteWatch']);
 };
