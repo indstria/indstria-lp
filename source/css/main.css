@@ -98,7 +98,7 @@ body {
         width: 95px;
         height: 245px; }
     .masthead footer {
-      bottom: 0; } }
+      bottom: 20px; } }
 @media only screen and (min-width: 768px) {
   /* for tablet */
   .container {
