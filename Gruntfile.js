@@ -85,7 +85,7 @@ module.exports = function(grunt){
             },
             build: {
                 files: [
-                    { expand: true, cwd: '<%= dir.source %>', src: ['*.{ico,txt,xml,htaccess}', 'fonts/*.{eot,svg,ttf,woff}'], dest: '<%= dir.build %>', filter: 'isFile' },
+                    { expand: true, cwd: '<%= dir.source %>', src: ['*.{ico,txt,xml,htaccess}', 'fonts/*.{eot,svg,ttf,woff}', 'CNAME'], dest: '<%= dir.build %>', filter: 'isFile' },
                 ]
             }
         },
