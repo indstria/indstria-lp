@@ -21,7 +21,6 @@ body {
 .masthead {
     padding-right: 0;
     padding-left: 0;
-    /*text-shadow: 0 1px 0 rgba(0,0,0,.1);*/
     z-index: 1;
     overflow: hidden;
     position: absolute;
@@ -89,15 +88,16 @@ body {
             .social-links {
                 margin-top: 80px;
                 position: absolute;
-                left: 130px;
+                left: 135px;
             }
         }
         section {
             margin-top: 20px;
-            img {
-                width: 95px;
-                height: 249px;
-            }
+            width: 135px;
+            height: 271px;
+            background-image: url(../img/iphone5s_spacegray_side_sp.png);
+            background-position: -15px 0;
+            background-size: 135px 271px;
         }
         footer {
             bottom: 20px;
@@ -125,10 +125,10 @@ body {
         }
         section {
             margin-top: -50px;
-            img {
-                width: 190px;
-                height: 498px;
-            }
+            width: 270px;
+            height: 541px;
+            background-image: url(../img/iphone5s_spacegray_side_pc.png);
+            background-size: 270px 541px;
         }
         footer {
             right: 24%;
@@ -158,10 +158,10 @@ body {
         }
         section {
             margin-top: -50px;
-            img {
-                width: 190px;
-                height: 498px;
-            }
+            width: 270px;
+            height: 541px;
+            background-image: url(../img/iphone5s_spacegray_side_pc.png);
+            background-size: 270px 541px;
         }
         footer {
             right: 20%;
