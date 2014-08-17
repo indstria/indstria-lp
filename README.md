@@ -1,7 +1,7 @@
 indstria-lp
 ======================
 
-This is indstria landing page.
+This is indstria launching soon page.
 
 - dev: http://wata.github.io/indstria-lp/
 - production: http://indstria.com
